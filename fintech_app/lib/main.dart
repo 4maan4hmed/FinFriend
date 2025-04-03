@@ -1,29 +1,28 @@
-import 'package:fintech_app/presentation/widgets/news_widget.dart';
 import 'package:flutter/material.dart';
-// Import the separate widget file
+import 'package:provider/provider.dart';
+
+import 'providers/finance_data_provider.dart';
+import 'screens/finance_home_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const FinanceApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class FinanceApp extends StatelessWidget {
+  const FinanceApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.black,
-        body: Center(
-          child: NewsCarousel(
-            images: [
-              "https://picsum.photos/2000/3000",
-              "https://picsum.photos/2000/3000",
-              "https://picsum.photos/2000/3000",
-            ],
-          ),
-        ),
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+        scaffoldBackgroundColor: Colors.white,
+        fontFamily: 'Roboto',
+      ),
+      home: ChangeNotifierProvider(
+        create: (context) => FinanceDataProvider(),
+        child: const FinanceHomeScreen(),
       ),
     );
   }
