@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/home/aditya/development/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/aditya/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/aditya/Documents/Coding/Project-College/FinFriend/fintech_app/android/app/.cxx/Debug/4a446m4k/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/aditya/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/aditya/Documents/Coding/Project-College/FinFriend/fintech_app/android/app/.cxx/Debug/4a446m4k/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}
