@@ -17,7 +17,8 @@ class MiniGraph extends StatelessWidget {
   }
 }
 
-class _MiniGraphPainter extends CustomPainter {//TODO::Make this a seperate widget
+class _MiniGraphPainter extends CustomPainter {
+  //TODO::Make this a seperate widget
   final List<double> points;
   final Color color;
 

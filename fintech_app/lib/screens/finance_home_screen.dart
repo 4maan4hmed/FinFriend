@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../providers/finance_data_provider.dart';
 import '../widgets/finance/daily_change_card.dart';
 import '../widgets/finance/header_section.dart';
@@ -38,21 +37,22 @@ class FinanceHomeScreen extends StatelessWidget {
 
                   // New stock ticker card (rotating stocks)
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 16.0),
+                        padding: EdgeInsets.only(left: 16, right: 8),
                         child: StockTickerCard(),
                       ),
 
-                      const SizedBox(height: 16),
-
                       // Daily change card (AAPL focused)
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        child: DailyChangeCard(
-                          percentageChange: aaplStock.percentageChange,
-                          priceChange: priceChange,
-                          currentPrice: aaplStock.price,
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 8, right: 16),
+                          child: DailyChangeCard(
+                            percentageChange: aaplStock.percentageChange,
+                            priceChange: priceChange,
+                            currentPrice: aaplStock.price,
+                          ),
                         ),
                       ),
                     ],

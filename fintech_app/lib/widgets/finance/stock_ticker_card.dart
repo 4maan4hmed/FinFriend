@@ -1,6 +1,8 @@
 import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../../providers/finance_data_provider.dart';
 
 //TODO::Add some sort of animation for the changing stocks value

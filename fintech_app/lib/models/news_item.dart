@@ -9,3 +9,4 @@ class NewsItem {
     required this.url,
   });
 }
+ 
