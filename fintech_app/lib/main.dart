@@ -14,8 +14,8 @@ class MainApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Hello World!'),
-              Text('Welcome to Flutter!'),
+              Text('We are testing'),
+              Text('Please work!'),
             ],
           ),
         ),
